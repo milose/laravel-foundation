@@ -15,6 +15,6 @@ trait RegistersUsersFoundation
      */
     public function showRegistrationForm()
     {
-        return view('vendor.auth.register');
+        return view('foundation::auth.register');
     }
 }

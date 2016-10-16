@@ -15,6 +15,6 @@ trait SendsPasswordResetEmailsFoumdation
      */
     public function showLinkRequestForm()
     {
-        return view('vendor.auth.passwords.email');
+        return view('foundation::auth.passwords.email');
     }
 }

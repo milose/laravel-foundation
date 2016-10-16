@@ -15,6 +15,6 @@ trait AuthenticatesUserFoundation
      */
     public function showLoginForm()
     {
-        return view('vendor.auth.login');
+        return view('foundation::auth.login');
     }
 }

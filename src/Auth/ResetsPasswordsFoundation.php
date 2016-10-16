@@ -19,7 +19,7 @@ trait ResetsPasswordsFountation
      */
     public function showResetForm(Request $request, $token = null)
     {
-        return view('vendor.auth.passwords.reset')->with(
+        return view('foundation::auth.passwords.reset')->with(
             ['token' => $token, 'email' => $request->email]
         );
     }
