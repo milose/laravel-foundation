@@ -14,9 +14,11 @@ Next, you should add tbe service provider to your `config/app.php` file by findi
 Milose\LaravelFoundation\LaravelFoundationServiceProvider::class,
 ```
 
-## 2. Using
+## 2. Using the views
 ### Auth scafolding
-Open all the files in `app/Http/Controllers/Auth`, and before every trait add `\Milose\LaravelFoundation\Auth\` to override the default view. So, for example, Login controller trait inside the class sould look like:
+In order for Laravel to use the custom views for Authentication, we must import this package traits to the appropriate controllers. These traits override the original methods with updated view names.
+Open all of the files in `app/Http/Controllers/Auth`, and before every trait add `\Milose\LaravelFoundation\Auth\` to override the default view. So, for example, Login controller trait inside the class sould look like:
+
 ```php
 use \Milose\LaravelFoundation\Auth\AuthenticatesUsers;
 ```
@@ -36,8 +38,8 @@ Or if you're using `simplePaginate` then add:
 {{ $users->links('zf::pagination.simple') }}
 ```
 
-## 3. Customize
-If you want to change how the layout of the files look, you need to publish the views to your `resources/views/vendor` folder by running
+## 3. Customize the views
+If you want to change how the views look, you need to publish the them to your `resources/views/vendor` folder by running
 ```bash
 php artisan vendor:publish --tag=zf
 ```
