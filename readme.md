@@ -41,11 +41,21 @@ If you want to change how the layout of the files look, you need to publish the 
 ```bash
 php artisan vendor:publish --tag=zf
 ```
-After this, in `resources/views/vendor/laravelFoundation` you will find Blade templates for both authentication and pagination. To use templates you customized templates for pagination, you would add this to your blade templates:
+After this, in `resources/views/vendor/laravelFoundation` you will find Blade templates for both authentication and pagination.
+
+### Authentication
+Find a way to customize auth, or just dump `zfc` and make users publish always
+
+### Pagination
+To use templates you customized templates for pagination, you would add this to your blade templates:
 ```php
 {{ $users->links('zfc::pagination.default') }}
 ```
+Note that you are using `zfc` instead of 'zf' hint path.
 
 ##TODO
+- Decide if views should just override the original laravel files, or use vendor/laravelFoundation like now
+    - easyer to customize but harder to install
+    - perhaps define views in config
 - Design Foundation forms
 - Design Foundation paginantion files
