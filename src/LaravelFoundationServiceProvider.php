@@ -9,12 +9,8 @@ class LaravelFoundationServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-             __DIR__.'/../resources/views/auth' => resource_path('views/vendor/laravelFoundation/auth'),
-         ], 'foundation-auth');
-
-        $this->publishes([
-             __DIR__.'/../resources/views/pagination' => resource_path('views/vendor/pagination'),
-         ], 'foundation-paginate');
+             __DIR__.'/../resources/views' => resource_path('views/vendor/laravelFoundation'),
+         ]);
 
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'foundation');
     }
