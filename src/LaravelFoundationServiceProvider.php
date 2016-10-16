@@ -10,7 +10,7 @@ class LaravelFoundationServiceProvider extends ServiceProvider
     {
         $this->publishes([
              __DIR__.'/../resources/views' => resource_path('views/vendor/laravelFoundation'),
-         ]);
+         ], 'foundation');
 
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'foundation');
     }
