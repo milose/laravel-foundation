@@ -27,7 +27,7 @@ use AuthenticatesUsers;
 Do this for all four files.
 
 ### Pagination
-In your blade files you can paginate as usual, by adding:
+In your blade files you can `paginate` as usual, by adding:
 ```php
 {{ $users->links('zf::pagination.default') }}
 ```
