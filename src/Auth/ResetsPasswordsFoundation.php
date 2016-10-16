@@ -2,11 +2,10 @@
 
 namespace Milose\LaravelFoundation\Auth;
 
-use Illuminate\Foundation\Auth\ResetsPasswords;
-
-trait ResetsPasswordsFountation
+trait ResetsPasswords
 {
-    use ResetsPasswords;
+    // Use original trait
+    use \Illuminate\Foundation\Auth\ResetsPasswords;
 
     /**
      * Display the password reset view for the given token.
@@ -19,6 +18,7 @@ trait ResetsPasswordsFountation
      */
     public function showResetForm(Request $request, $token = null)
     {
+        // Override view
         return view('foundation::auth.passwords.reset')->with(
             ['token' => $token, 'email' => $request->email]
         );

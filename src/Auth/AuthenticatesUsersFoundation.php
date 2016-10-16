@@ -2,11 +2,10 @@
 
 namespace Milose\LaravelFoundation\Auth;
 
-use Illuminate\Foundation\Auth\AuthenticatesUsers;
-
-trait AuthenticatesUserFoundation
+trait AuthenticatesUsers
 {
-    use AuthenticatesUser;
+    // Use original trait
+    use \Illuminate\Foundation\Auth\AuthenticatesUsers;
 
     /**
      * Show the application's login form.
@@ -15,6 +14,7 @@ trait AuthenticatesUserFoundation
      */
     public function showLoginForm()
     {
+        // Override view
         return view('foundation::auth.login');
     }
 }

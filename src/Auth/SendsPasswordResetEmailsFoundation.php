@@ -2,11 +2,10 @@
 
 namespace Milose\LaravelFoundation\Auth;
 
-use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
-
-trait SendsPasswordResetEmailsFoumdation
+trait SendsPasswordResetEmails
 {
-    use SendsPasswordResetEmails;
+    // Use original trait
+    use \Illuminate\Foundation\Auth\SendsPasswordResetEmails;
 
     /**
      * Display the form to request a password reset link.
@@ -15,6 +14,7 @@ trait SendsPasswordResetEmailsFoumdation
      */
     public function showLinkRequestForm()
     {
+        // Override view
         return view('foundation::auth.passwords.email');
     }
 }

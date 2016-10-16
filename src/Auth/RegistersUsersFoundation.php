@@ -2,11 +2,10 @@
 
 namespace Milose\LaravelFoundation\Auth;
 
-use Illuminate\Foundation\Auth\RegistersUsers;
-
-trait RegistersUsersFoundation
+trait RegistersUsers
 {
-    use RegistersUsers;
+    // Use original trait
+    use \Illuminate\Foundation\Auth\RegistersUsers;
 
     /**
      * Show the application registration form.
@@ -15,6 +14,7 @@ trait RegistersUsersFoundation
      */
     public function showRegistrationForm()
     {
+        // Override view
         return view('foundation::auth.register');
     }
 }
