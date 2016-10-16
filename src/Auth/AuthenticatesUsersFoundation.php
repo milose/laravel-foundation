@@ -15,6 +15,6 @@ trait AuthenticatesUsers
     public function showLoginForm()
     {
         // Override view
-        return view('zf::auth.login');
+        return view('lf::auth.login');
     }
 }

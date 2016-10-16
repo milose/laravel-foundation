@@ -15,6 +15,6 @@ trait RegistersUsers
     public function showRegistrationForm()
     {
         // Override view
-        return view('zf::auth.register');
+        return view('lf::auth.register');
     }
 }
