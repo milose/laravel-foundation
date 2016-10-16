@@ -1,6 +1,6 @@
 {
     "name": "milose/laravel-foundation",
-    "description": "Override Laravel views using Zurb Foundation instead of Twitter Bootstrap.",
+    "description": "DO NOT USE YET - Override Laravel views using Zurb Foundation instead of Twitter Bootstrap.",
     "type": "laravel-plugin",
     "license": "MIT",
     "authors": [{
