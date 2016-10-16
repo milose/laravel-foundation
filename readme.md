@@ -3,7 +3,7 @@ Use this package to override bootstrap templates for auth and home page with Zur
 
 # DO NOT USE THIS YET
 
-# 1. Installation
+## 1. Installation
 To install this package run
 ```bash
 composer require milose/laravel-foundation
@@ -14,8 +14,8 @@ Next, you should add tbe service provider to your `config/app.php` file by findi
 Milose\LaravelFoundation\LaravelFoundationServiceProvider::class,
 ```
 
-# 2. Using
-## Auth scafolding
+## 2. Using
+### Auth scafolding
 Open `app/Http/Controllers/Auth` files and and before every trait add `\Milose\LaravelFoundation\Auth\` to override the default view. So, for example, Login controller trait inside the class sould look like:
 ```php
 use \Milose\LaravelFoundation\Auth\AuthenticatesUsers;
@@ -26,16 +26,16 @@ use AuthenticatesUsers;
 ```
 Do this for all four files.
 
-## Pagination
+### Pagination
 In your blade files
 
-# 3. Customize
+## 3. Customize
 If you want to change how the layout of the files look, you need to publish the views to your `resources/views/vendor` folder by running
 ```bash
 php artisan vendor:publish --tag=foundation
 ```
 After this, in `resources/views/vendor/laravelFoundation` you will find Blade templates for both authentication and pagination.
 
-#TODO
+##TODO
 - Design Foundation forms
 - Design Foundation paginantion files
