@@ -19,7 +19,7 @@ trait ResetsPasswords
     public function showResetForm(Request $request, $token = null)
     {
         // Override view
-        return view('foundation::auth.passwords.reset')->with(
+        return view('zf::auth.passwords.reset')->with(
             ['token' => $token, 'email' => $request->email]
         );
     }

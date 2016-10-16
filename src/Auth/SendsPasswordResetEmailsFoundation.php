@@ -15,6 +15,6 @@ trait SendsPasswordResetEmails
     public function showLinkRequestForm()
     {
         // Override view
-        return view('foundation::auth.passwords.email');
+        return view('zf::auth.passwords.email');
     }
 }
