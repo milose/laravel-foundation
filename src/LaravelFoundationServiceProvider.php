@@ -14,7 +14,9 @@ class LaravelFoundationServiceProvider extends ServiceProvider
         $this->publishes([
             $local_path => $vendor_path,
         ], 'zf');
+        
 
+        $this->loadViewsFrom($vendor_path, 'zf');
         $this->loadViewsFrom($local_path, 'zf');
     }
 
