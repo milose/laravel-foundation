@@ -2,7 +2,6 @@
 
 namespace Milose\LaravelFoundation;
 
-use Cookie;
 use Illuminate\Support\ServiceProvider;
 
 class LaravelFoundationServiceProvider extends ServiceProvider
