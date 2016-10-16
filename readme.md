@@ -1,5 +1,5 @@
 # Laravel Foundation package
-Use this package to override Bootstrap templates for auth and pagination with Zurb Foundation (zf).
+Use this package to override Bootstrap templates for auth and pagination with Zurb Foundation.
 
 # DO NOT USE THIS YET
 
@@ -31,17 +31,17 @@ Do this for all files.
 ### Pagination
 In your blade files you can `paginate` as usual, by adding:
 ```php
-{{ $users->links('zf::pagination.default') }}
+{{ $users->links('lf::pagination.default') }}
 ```
 Or if you're using `simplePaginate` then add:
 ```php
-{{ $users->links('zf::pagination.simple') }}
+{{ $users->links('lf::pagination.simple') }}
 ```
 
 ## 3. Customize the views
 If you want to change how the views look, you need to publish the them to your `resources/views/vendor` folder by running
 ```bash
-php artisan vendor:publish --tag=zf
+php artisan vendor:publish --tag=lf
 ```
 After this, in `resources/views/vendor/laravelFoundation` you will find Blade templates for both authentication and pagination.
 
