@@ -16,7 +16,7 @@ trait ResetsPasswords
      * @param  string|null  $token
      * @return \Illuminate\Http\Response
      */
-    public function showResetForm(Request $request, $token = null)
+    public function showResetForm(\Illuminate\Http\Request $request, $token = null)
     {
         // Override view
         return view('lf::auth.passwords.reset')->with(
