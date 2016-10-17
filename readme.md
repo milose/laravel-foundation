@@ -39,7 +39,7 @@ Or if you're using `simplePaginate` then add:
 ```
 
 ## 3. Customize the views
-If you want to change how the views look, you need to publish the them to your `resources/views/vendor` folder by running
+If you want to change how the views look, you need to publish the them to your `resources/views/vendor` directory by running
 ```bash
 php artisan vendor:publish --tag=lf
 ```
