@@ -1,8 +1,6 @@
 # Laravel Foundation package
 Use this package to override Bootstrap templates for auth and pagination with Zurb Foundation.
 
-# DO NOT USE THIS YET
-
 ## 1. Installation
 To install this package run
 ```bash
@@ -45,7 +43,38 @@ php artisan vendor:publish --tag=lf
 ```
 After this, in `resources/views/vendor/laravelFoundation` you will find Blade templates for both authentication and pagination.
 
+
+## 4. Adding Zurb Foundation to your project
+
+```bash
+yarn add foundation-sites --dev
+mkdir resources/assets/sass/foundation/
+mkdir resources/assets/sass/foundation/util
+cp node_modules/foundation-sites/scss/settings/_settings.scss resources/assets/sass/foundation/
+cp -R node_modules/foundation-sites/scss/util/ resources/assets/sass/foundation/util/
+```
+
+In your `resources/assets/sass/app.scss` file remove Bootstrap portion and add:
+```scss
+// Foundation
+@import 'node_modules/foundation-sites/scss/foundation';
+@import "foundation/settings";
+@include foundation-everything; //or @include only the components you need
+```
+
+In your `resources/assets/js/bootstrap.js` remove:
+```js
+require('bootstrap-sass');
+```
+And add:
+```js
+require('foundation-sites')
+$(document).ready(function() {
+    $(document).foundation()
+})
+```
+
+Then run `gulp` to recompile the assets.
+
 ##TODO
-- Design Foundation forms
-- Design Foundation paginantion files
 - Test
