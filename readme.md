@@ -1,6 +1,7 @@
 # Laravel Foundation package
 Use this package to override Bootstrap templates for auth and pagination with Zurb Foundation.
 
+
 ## 1. Installation
 To install this package run
 ```bash
@@ -11,6 +12,7 @@ Next, you should add tbe service provider to your `config/app.php` file by findi
 ```php
 Milose\LaravelFoundation\LaravelFoundationServiceProvider::class,
 ```
+
 
 ## 2. Using the views
 ### Auth scafolding
@@ -36,7 +38,8 @@ Or if you're using `simplePaginate` then add:
 {{ $users->links('lf::pagination.simple') }}
 ```
 
-## 3. Customize the views
+
+## 3. Customizing the views
 If you want to change how the views look, you need to publish the them to your `resources/views/vendor` directory by running
 ```bash
 php artisan vendor:publish --tag=lf
@@ -45,23 +48,27 @@ After this, in `resources/views/vendor/laravelFoundation` you will find Blade te
 
 
 ## 4. Adding Zurb Foundation to your project
-
+Import npm package and copy settings and utils so you can customize Foundation:
 ```bash
 yarn add foundation-sites --dev
 mkdir resources/assets/sass/foundation/
-mkdir resources/assets/sass/foundation/util
 cp node_modules/foundation-sites/scss/settings/_settings.scss resources/assets/sass/foundation/
 cp -R node_modules/foundation-sites/scss/util/ resources/assets/sass/foundation/util/
 ```
-
-In your `resources/assets/sass/app.scss` file remove Bootstrap portion and add:
+### SCSS
+In your `resources/assets/sass/app.scss` file remove:
+```scss
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+```
+And add:
 ```scss
 // Foundation
 @import 'node_modules/foundation-sites/scss/foundation';
 @import "foundation/settings";
 @include foundation-everything; //or @include only the components you need
 ```
-
+### JavaScript
 In your `resources/assets/js/bootstrap.js` remove:
 ```js
 require('bootstrap-sass');
