@@ -8,7 +8,7 @@ To install this package run
 composer require milose/laravel-foundation
 ```
 
-Next, you should add tbe service provider to your `config/app.php` file by finding `providers` key, and adding this to the end of the list:
+Next, you should add the service provider to your `config/app.php` file by finding `providers` key, and adding this to the end of the list:
 ```php
 Milose\LaravelFoundation\LaravelFoundationServiceProvider::class,
 ```
@@ -69,7 +69,7 @@ And add:
 @include foundation-everything; //or @include only the components you need
 ```
 ### JavaScript
-In your `resources/assets/js/bootstrap.js` remove:
+In your `resources/assets/js/bootstrap.js` file remove:
 ```js
 require('bootstrap-sass');
 ```
