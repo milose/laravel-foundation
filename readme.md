@@ -50,7 +50,7 @@ After this, in `resources/views/vendor/laravelFoundation` you will find Blade te
 ## 4. Adding Zurb Foundation to your project
 Import npm package and copy settings and utils so you can customize Foundation:
 ```bash
-yarn add foundation-sites --dev
+yarn add foundation-sites motion-ui --dev
 mkdir resources/assets/sass/foundation/
 cp node_modules/foundation-sites/scss/settings/_settings.scss resources/assets/sass/foundation/
 cp -R node_modules/foundation-sites/scss/util/ resources/assets/sass/foundation/util/
@@ -67,6 +67,9 @@ And add:
 @import 'node_modules/foundation-sites/scss/foundation';
 @import "foundation/settings";
 @include foundation-everything; //or @include only the components you need
+
+// Motion-Ui
+@import 'node_modules/motion-ui/motion-ui'
 ```
 ### JavaScript
 In your `resources/assets/js/bootstrap.js` file remove:
@@ -75,7 +78,9 @@ require('bootstrap-sass');
 ```
 And add:
 ```js
-require('foundation-sites')
+require('motion-ui')
+require('what-input')
+require('foundation-sites') // or individual components
 $(document).ready(function() {
     $(document).foundation()
 })
