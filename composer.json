@@ -14,5 +14,18 @@
         "psr-4": {
             "Milose\\LaravelFoundation\\": "src"
         }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.1-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Milose\\LaravelFoundation\\LaravelFoundationServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
     }
 }
