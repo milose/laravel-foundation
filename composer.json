@@ -3,9 +3,17 @@
     "description": "Override Laravel Auth/Pagination views using Zurb Foundation instead of Twitter Bootstrap.",
     "type": "laravel-plugin",
     "license": "MIT",
+    "keywords": [
+        "Milose",
+        "LaravelFoundation",
+        "Laravel Foundation"
+    ],
+    "homepage": "https://github.com/milose/laravel-foundation",
     "authors": [{
         "name": "Milos Sakovic",
-        "email": "milos@deva.co"
+        "email": "milos@deva.co",
+        "homepage": "http://deva.co",
+        "role": "Developer"
     }],
     "require": {
         "php": "^5.6|^7.0"
@@ -14,5 +22,18 @@
         "psr-4": {
             "Milose\\LaravelFoundation\\": "src"
         }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.1-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Milose\\LaravelFoundation\\LaravelFoundationServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
     }
 }
