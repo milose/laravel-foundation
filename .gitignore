@@ -1,1 +1,8 @@
-/vendor/
+/.idea
+/.vscode
+/vendor
+.env
+.tags
+.tags1
+npm-debug.log
+yarn-error.log
